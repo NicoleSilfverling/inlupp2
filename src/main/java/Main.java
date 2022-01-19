@@ -16,7 +16,7 @@ public class Main {
 
 
 
-        System.out.println(owl.eat(pineTree) ? owl.getName() + " the owl ate a stolen cone from a squirrel" : "The squirrel was too fast, no food for " + owl.getName());
+        System.out.println(owl.eat(pineTree) ? "Nom nom nom, " + owl.getName() + " the owl stole the squirrels pine cone" : "The squirrel was too fast, no food for " + owl.getName());
 
 
         System.out.println(pineTree.fall(40, 700, 5) ? "The tree fell" : "The tree survived");

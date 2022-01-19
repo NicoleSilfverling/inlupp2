@@ -54,10 +54,17 @@ public class Owl extends Animal {
         this.name = name;
     }
 
+
     public boolean eat(PineTree pineTree){
         Random random = new Random();
         int squirrelSpeed = random.nextInt(11);
         int owlSpeed = random.nextInt(11);
         return hungry && owlSpeed > squirrelSpeed;
     }
+
+    @Override
+    public boolean eat(Object food) {
+        return food instanceof PineTree.PineCone;
+    }
+
 }

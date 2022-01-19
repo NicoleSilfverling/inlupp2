@@ -60,6 +60,7 @@ public class Squirrel extends Animal {
         this.hungry = hungry;
     }
 
+
     public boolean eat(PineTree pineTree){
         if(hungry && (numOfConesInNest > 0 || pineTree.getNumOfCones() > 0)){
             setWeight(getWeight() + 10);
@@ -67,4 +68,10 @@ public class Squirrel extends Animal {
         }
         return false;
     }
+
+    @Override
+    public boolean eat(Object food) {
+        return food instanceof PineTree.PineCone;
+    }
+
 }

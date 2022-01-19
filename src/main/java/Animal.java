@@ -11,4 +11,6 @@ public abstract class Animal {
         this.weight = weight;
         this.name = name;
     }
+
+    public abstract boolean eat(Object food);
 }

@@ -1,21 +1,14 @@
 import java.util.Random;
 
-public class Owl {
+public class Owl extends Animal {
 
     private int wingSpan;
 
-    private  boolean hungry;
-
-    private double weight;
-
-    private String name;
 
     //constructor
-    public Owl(int wingSpan, boolean hungry, double weight, String name) {
+    public Owl(int wingSpan, boolean hungry, int weight, String name) {
+        super(hungry, weight, name);
         this.wingSpan = wingSpan;
-        this.hungry = hungry;
-        this.weight = weight;
-        this.name = name;
     }
 
     private static final int DEFAULT_WINGSPAN = 90;
@@ -45,7 +38,7 @@ public class Owl {
         return weight;
     }
 
-    public void setWeight(double weight) {
+    public void setWeight(int weight) {
         if (weight >= 2000 && weight <= 4000) {
             this.weight = weight;
         }else {

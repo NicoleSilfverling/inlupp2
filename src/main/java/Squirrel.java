@@ -1,23 +1,17 @@
-public class Squirrel {
-
-    private int weight;
+public class Squirrel extends Animal {
 
     private int numOfConesInNest;
 
     private int age;
 
-    private String name;
-
-    private boolean hungry;
 
     //constructor
     public Squirrel(int weight, int numOfConesInNest, int age, String name, boolean hungry) {
-        this.weight = weight;
+        super(hungry, weight, name);
         this.numOfConesInNest = numOfConesInNest;
         this.age = age;
-        this.name = name;
-        this.hungry = hungry;
     }
+
 
     private static final int DEFAULT_WEIGHT = 300;
 

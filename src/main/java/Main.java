@@ -12,14 +12,14 @@ public class Main {
 
         Owl owl = new Owl(85, true, 3500,"Magnus");
 
-        PineTree pineTree = new PineTree(12, squirrels, owl, 650);
+        PineTree pineTree = new PineTree(12, squirrels, owl, 650, 40);
 
 
 
         System.out.println(owl.eat(pineTree) ? "Nom nom nom, " + owl.getName() + " the owl stole the squirrels pine cone" : "The squirrel was too fast, no food for " + owl.getName());
 
 
-        System.out.println(pineTree.fall(40, 700, 5) ? "The tree fell" : "The tree survived");
+        System.out.println(pineTree.fall(pineTree.getHeight(), pineTree.getAge(), 5) ? "The tree fell" : "The tree survived");
 
 
 
@@ -29,9 +29,6 @@ public class Main {
             System.out.println("No food for " + squirrels.get(0).getName());
         }
 
-
-        boolean pineTreeFell = pineTree.fall(40, 700, 5);
-        System.out.println("Did the tree fall? " + pineTreeFell);
 
 
 

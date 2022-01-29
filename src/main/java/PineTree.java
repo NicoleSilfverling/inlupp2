@@ -11,12 +11,15 @@ public class PineTree {
 
     private int age;
 
+    private int height;
+
     //constructor
-    public PineTree(int numOfCones, List<Squirrel> squirrels, Owl owl, int age) {
+    public PineTree(int numOfCones, List<Squirrel> squirrels, Owl owl, int age, int height) {
         this.numOfCones = numOfCones;
         this.squirrels = squirrels;
         this.owl = owl;
         this.age = age;
+        this.height = height;
     }
 
     public int getNumOfCones() {
@@ -50,6 +53,10 @@ public class PineTree {
     public void setAge(int age) {
         this.age = age;
     }
+
+    public int getHeight() {return height;}
+
+    public void setHeight(int height) {this.height = height;}
 
     public boolean fall(int height, int age, int earthquake){
         if (age > 600 && height > 30 && earthquake > 3){

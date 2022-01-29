@@ -26,9 +26,7 @@ public class Owl extends Animal {
         }
     }
 
-    public boolean isHungry() {
-        return hungry;
-    }
+    public boolean getHungry() {return hungry;}
 
     public void setHungry(boolean hungry) {
         this.hungry = hungry;
